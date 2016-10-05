@@ -22,3 +22,15 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
+.controller('MainController', function ($scope) {
+  $scope.todos =[];
+  $scope.todoModel = {};
+  $scope.todoModel.todo = '';
+  $scope.screwUp = function(){
+    $scope.todos.push($scope.todoModel.todo);
+    $scope.todoModel = {
+      todo: ''
+    }
+  }
+})
